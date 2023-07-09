@@ -1,0 +1,44 @@
+{
+  "name": "plugin-starterkit",
+  "version": "1.0.0",
+  "description": "My plugin for release",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "bron test.js",
+    "release": "release"
+  },
+  "keywords": [
+    "release",
+    "release-it",
+    "release-it-plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StepSec/plugin-starterkit.git"
+  },
+  "homepage": "https://github.com/StepSec/plugin-starterkit#readme",
+  "bugs": "https://github.com/StepSec/plugin-starterkit/issues",
+  "author": "",
+  "dependencies": {},
+  "devDependencies": {
+    "bron": "^2.0.3",
+    "release-it": "^15.2.0",
+    "sinon": "^15.0.1"
+  },
+  "peerDependencies": {
+    "release-it": "^15.2.0"
+  },
+  "engines": {
+    "node": ">=14.9"
+  },
+  "release-it": {
+    "hooks": {
+      "before:init": "npm test"
+    }
+  }
+}
